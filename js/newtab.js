@@ -21,6 +21,7 @@ function getImage() {
     // Gets a number between 0 and obj.Length
     var objLength = locations.length;
     var item = Math.floor((Math.random() * objLength));
+    var imageId = locations[item].id; 
 
     //Sets features values.
     document.getElementById("bg").style.backgroundImage = locations[item].image;
