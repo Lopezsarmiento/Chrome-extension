@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "Pepper",
+    "description": "Dummy extension project.",
+    "version": "1",
+    "author": "sumercisco",
+    "browser_action": {
+        "default_tittle": "Have a good day"
+    },
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "permissions": ["activeTab"]
+}

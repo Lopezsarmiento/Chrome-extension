@@ -1,0 +1,58 @@
+body, html {
+    height: 100%;
+}
+
+.bg {
+    /* image to use */
+    background-image: url("../images/colombia1.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+span, p {
+    font-family: -apple-system, 
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto, 
+    Oxygen-Sans, 
+    Ubuntu, 
+    Cantarell, 
+    "Helvetica Neue",
+    sans-serif;
+
+    color: #FFF;
+}
+.top-row {
+    padding-top: 2%;
+    height: 10%;
+}
+
+.middle-row {
+    height: 80%;
+    display: block;
+}
+
+.bottom-row {
+    height: 10%;
+}
+
+.middle {
+    height: 100%;
+    text-align: center;
+    padding-top: 10%; 
+}
+
+#clock {
+    font-size: 800%;
+}
+
+.greeting {
+    text-align: center;
+    font-size: 200%;
+}
