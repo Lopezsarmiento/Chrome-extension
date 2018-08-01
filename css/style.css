@@ -4,9 +4,11 @@ body, html {
     height: 100%;
 }
 
-.bg {
-    /* image to use */
-    background-image: url("../images/cartagena.jpg");
+#bg {
+    /* The image use as bground
+    is being retrieved dinamically
+    inside newtab.js
+    */
 
     /* Full height */
     height: 100%;

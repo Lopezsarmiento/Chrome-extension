@@ -1,3 +1,36 @@
+var locations = [
+    {
+        "name":"Cartagena - Colombia",
+        "image":"url(../images/cartagena.jpg)"
+    },
+    {
+        "name":"Cano Cristales - Colombia",
+        "image":"url(../images/canoCristales.jpg)"
+    },
+    {
+        "name":"Parque Tayrona - Colombia",
+        "image":"url(../images/colombia1.jpg)"
+    }
+];
+
+function random() {
+    var objLength = locations.length;
+    return Math.floor((Math.random() * objLength));
+}
+
+function getImage() {
+
+    // Gets a number between 0 and obj.Length.
+    var item = random();
+
+    //Sets features values.
+    document.getElementById("bg").style.backgroundImage = locations[item].image;
+    document.getElementById("location").innerHTML = locations[item].name;
+
+    //Changes image at certain amount of time.
+    var reloadImage = setTimeout(getImage, 3000);
+}
+
 function startTime() {
     var today = new Date();
     var h = today.getHours();
@@ -13,5 +46,5 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
-
+getImage();
 startTime();
