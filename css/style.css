@@ -1,10 +1,12 @@
 body, html {
+    max-width: 100%;
+    overflow-x: hidden;
     height: 100%;
 }
 
 .bg {
     /* image to use */
-    background-image: url("../images/colombia1.jpg");
+    background-image: url("../images/cartagena.jpg");
 
     /* Full height */
     height: 100%;
@@ -27,6 +29,7 @@ span, p {
     sans-serif;
 
     color: #FFF;
+    text-shadow: 1px 1px 2px #292929;
 }
 .top-row {
     padding-top: 2%;
@@ -49,10 +52,10 @@ span, p {
 }
 
 #clock {
-    font-size: 800%;
+    font-size: 1100%;
 }
 
 .greeting {
     text-align: center;
-    font-size: 200%;
+    font-size: 300%;
 }
