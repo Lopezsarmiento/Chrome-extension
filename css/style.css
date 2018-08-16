@@ -1,3 +1,10 @@
+/*
+Theme Name: exploreColombia Chrome Extension
+Description: Extension for Google Chrome
+Author: Diego Lopez
+Author URI: 
+Tags: main styles, Chrome extension
+*/
 body, html {
     max-width: 100%;
     overflow-x: hidden;
@@ -7,8 +14,7 @@ body, html {
 #bg {
     /* The image use as bground
     is being retrieved dinamically
-    inside newtab.js
-    */
+    inside newtab.js*/
 
     /* Full height */
     height: 100%;
