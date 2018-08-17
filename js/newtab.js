@@ -6,7 +6,7 @@ var locations = [
     },
     {
         "id": 2,
-        "name":"Cano Cristales - Colombia",
+        "name":"Caño Cristales - Colombia",
         "image":"url(../images/canoCristales.jpg)"
     },
     {
@@ -36,9 +36,24 @@ function startTime() {
     var h = today.getHours();
     var m = today.getMinutes();
     var s = today.getSeconds();
+    var greet;
+    var name = "Pepper";
     m = checkTime(m);
     s = checkTime(s);
+
+    //Display time of day
+    if (h >= 00 && h <=12) {
+        greet = "Good morning, ";
+    } else if (h > 12 && h < 18) {
+        greet = "Good afternoon, ";
+    } else {
+        greet = "Good evening, ";
+    }
+
+    document.getElementById('greet').innerHTML = greet+name;
+    //Displaying time on screen
     document.getElementById('clock').innerHTML = h + ":" + m;
+
     var reloadTime = setTimeout(startTime, 500);
 }
 
@@ -46,5 +61,39 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
+
+function checkWeather() {
+
+    var city = "buenos+aires";
+    var apiKey = "&appid=cf6f3902316f9fa78adcc4f336e2728a"; //5f008a01931300e3dc2c478c5095fd71
+    var units = "&units=metric";
+    var url = 'http://api.openweathermap.org/data/2.5/weather?q='+city+units+apiKey;
+
+    // Create a request variable and assign a new XMLHttpRequest object to it.
+    var request = new XMLHttpRequest();
+
+    // Open a new connection, using the GET request on the URL endpoint
+    request.open('GET', url, true);
+
+    request.onload = function () {
+        // Begin accessing JSON data here
+        var data = JSON.parse(this.response);
+
+        if (request.status >= 200 && request.status < 400) {
+
+            document.getElementById('city').innerHTML = data.name;
+            document.getElementById('temp').innerHTML = data.main.temp;
+
+        } else {
+            console.log('error :' + 'request.status : ' + request.status);
+        }
+        
+    }
+
+    // Send request
+    request.send();
+}
+
 getImage();
 startTime();
+checkWeather();
