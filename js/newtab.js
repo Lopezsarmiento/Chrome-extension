@@ -45,9 +45,7 @@ function startTime() {
     const h = today.getHours();
     var m = today.getMinutes();
     var s = today.getSeconds();
-    var name = "Pepper";
-    m = checkTime(m);
-    s = checkTime(s);
+    var name = "Pepperino";
 
     var greet = timeOfDay(h);
 
@@ -56,8 +54,9 @@ function startTime() {
 
     // Add trailing zeros to mins
     m = checkTime(m);
+    s = checkTime(s);
     // Set clock value on screen
-    clock.innerHTML = `${h}:${m}`;
+    clock.innerHTML = `${h}:${m}:${s}`;
     // Get time value every n secs
     const reloadTime = setInterval(startTime, 1000);
 }
@@ -104,7 +103,8 @@ function checkWeather() {
         if (request.status >= 200 && request.status < 400) {
 
             cityId.innerHTML = data.name;
-            tempId.innerHTML = data.main.temp;
+            temperature = data.main.temp;
+            tempId.innerHTML = temperature.toFixed(1); //reduce to one decimal
 
         } else {
             console.log('error :' + 'request.status : ' + request.status);
