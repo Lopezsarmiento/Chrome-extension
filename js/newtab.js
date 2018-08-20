@@ -74,9 +74,7 @@ function getImage() {
     locationName.innerHTML = locations[item].name;
 
     // Change image at certain amount of time.
-    const reloadImage = setInterval(getImage, 10000);
-    // Get quote
-    const reloadQuote = setInterval(getQuote, 10000);
+    const reloadImage = setTimeout(getImage, 10000);
 
 }
 
@@ -89,6 +87,8 @@ function getQuote() {
 
     // Set quote on screen
     quoteId.innerHTML = quote;
+    // Get quote
+    const reloadQuote = setTimeout(getQuote, 10000);
 }
 
 function startTime() {
