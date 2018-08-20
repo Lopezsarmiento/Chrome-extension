@@ -41,6 +41,9 @@ span, p, a {
     color: #FFF;
     text-shadow: 1px 1px 2px #292929;
 }
+.text-left {
+    color: #FFF;
+}
 .text-left a {
     text-decoration: none;
 }
