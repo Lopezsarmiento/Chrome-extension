@@ -24,10 +24,11 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* weather icons*/
 i {
     font-size: 25px;
 }
-span, p, a {
+blockquote, span, p, a {
     font-family: -apple-system, 
     BlinkMacSystemFont, 
     "Segoe UI", 
