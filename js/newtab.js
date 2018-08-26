@@ -56,7 +56,7 @@
 			"location": "Ipiales",
 			"link": "http://www.colombia.travel/es/que-hacer/pacifica/pasto/experiencias/el-santuario-de-las-lajas",
 			"image": "url(../images/santuariolaslajas.jpg)",
-			"fact": "Approximately 90% of the population is Catholic."
+			"fact": "Approximately 90% of the population of Colombia is Catholic."
 		},
 		{
 			"id": 8,
@@ -146,8 +146,8 @@
 
 	function checkWeather() {
 
-		const city = "buenos+aires";
-		const apiKey = "&appid=cf6f3902316f9fa78adcc4f336e2728a"; //5f008a01931300e3dc2c478c5095fd71
+		const city = "san+francisco";
+		const apiKey = "&appid=cf6f3902316f9fa78adcc4f336e2728a";
 		const units = "&units=metric";
 		const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}${units}${apiKey}`;
 		// DOM Elements
@@ -183,7 +183,7 @@
 				const temperature = (data.main.temp).toFixed(0);
 				tempId.innerHTML = `${temperature}&#x2103;`;
 				iconId.setAttribute('class', weatherIconID);
-				cityId.innerHTML = data.name;
+				cityId.innerHTML = (data.name).toUpperCase();
 
 			} else {
 				console.log('error :' + 'request.status : ' + request.status);

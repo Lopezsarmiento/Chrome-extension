@@ -30,7 +30,7 @@ i, #temp {
 }
 
 #city {
-    font-size: 15px;
+    font-size: 18px;
 }
 
 blockquote, span, p, a, i {
@@ -47,9 +47,11 @@ blockquote, span, p, a, i {
     color: #FFF;
     text-shadow: 1px 1px 2px #292929;
 }
-.text-left {
+.text-left, .text-center {
     color: #FFF;
+    font-size: 15px;
 }
+
 .text-left a {
     text-decoration: none;
 }
@@ -74,10 +76,10 @@ blockquote, span, p, a, i {
 }
 
 #clock {
-    font-size: 1100%;
+    font-size: 180px;
 }
 
 .greeting {
     text-align: center;
-    font-size: 300%;
+    font-size: 50px;
 }
