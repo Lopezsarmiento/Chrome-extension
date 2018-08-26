@@ -5,8 +5,8 @@
 		{
 			"id": 1,
 			"place": "Torre del reloj",
-			"location":"Cartagena de Indias",
-			"link":"http://www.colombia.travel/es/a-donde-ir/caribe/cartagena-de-indias",
+			"location": "Cartagena de Indias",
+			"link": "http://www.colombia.travel/es/a-donde-ir/caribe/cartagena-de-indias",
 			"image": "url(../images/cartagena.jpg)",
 			"fact": "The highest point in Colombia is the Pico Cristóbal Colón of the Andes, which stands at 18,700 feet tall."
 		},
@@ -14,7 +14,7 @@
 			"id": 2,
 			"place": "Caño Cristales",
 			"location": "Serrania de la Macarena",
-			"link":"http://www.colombia.travel/es/a-donde-ir/orinoquia/la-macarena/actividades/asombrate-con-cano-cristales",
+			"link": "http://www.colombia.travel/es/a-donde-ir/orinoquia/la-macarena/actividades/asombrate-con-cano-cristales",
 			"image": "url(../images/canoCristales.jpg)",
 			"fact": "Colombia is the second most biodiverse country in the world, after only Brazil which is 10 times its size. It is one of only 17 “megadiverse” countries in the world."
 		},
@@ -22,7 +22,7 @@
 			"id": 3,
 			"place": "Parque Tayrona",
 			"location": "Santa Marta",
-			"link":"http://www.colombia.travel/es/a-donde-ir/caribe/santa-marta",
+			"link": "http://www.colombia.travel/es/a-donde-ir/caribe/santa-marta",
 			"image": "url(../images/tayrona.jpg)",
 			"fact": "Colombia is the only country in South America that has coastlines on both the Pacific Ocean and the Caribbean Sea."
 		},
@@ -30,7 +30,7 @@
 			"id": 4,
 			"place": "Valle del Cocora",
 			"location": "Salento",
-			"link":"http://www.colombia.travel/es/a-donde-ir/andina/armenia/actividades/conoce-el-valle-del-cocora",
+			"link": "http://www.colombia.travel/es/a-donde-ir/andina/armenia/actividades/conoce-el-valle-del-cocora",
 			"image": "url(../images/cocora.jpg)",
 			"fact": "Colombia is part of the Ring of Fire, a group of countries in the Pacific Ocean vulnerable to earthquakes and volcanic eruptions."
 		},
@@ -38,7 +38,7 @@
 			"id": 5,
 			"place": "Cerro de Monserrate",
 			"location": "Bogotá",
-			"link":"http://www.colombia.travel/es/a-donde-ir/andina/bogota",
+			"link": "http://www.colombia.travel/es/a-donde-ir/andina/bogota",
 			"image": "url(../images/monserrate.jpg)",
 			"fact": "Bogota has South America’s largest network of bicycle routes: over 300km stretching from slum areas and suburbs to the city centre."
 		},
@@ -46,7 +46,7 @@
 			"id": 6,
 			"place": "Cayo Acuario",
 			"location": "San Andres Islas",
-			"link":"http://www.colombia.travel/es/a-donde-ir/caribe/san-andres",
+			"link": "http://www.colombia.travel/es/a-donde-ir/caribe/san-andres",
 			"image": "url(../images/sanandres.jpg)",
 			"fact": "There are over 300 beaches that locals and tourists can take advantage of to see all of the natural beauty this country has to offer."
 		},
@@ -54,7 +54,7 @@
 			"id": 7,
 			"place": "Santuario de las lajas",
 			"location": "Ipiales",
-			"link":"http://www.colombia.travel/es/que-hacer/pacifica/pasto/experiencias/el-santuario-de-las-lajas",
+			"link": "http://www.colombia.travel/es/que-hacer/pacifica/pasto/experiencias/el-santuario-de-las-lajas",
 			"image": "url(../images/santuariolaslajas.jpg)",
 			"fact": "Approximately 90% of the population is Catholic."
 		},
@@ -62,7 +62,7 @@
 			"id": 8,
 			"place": "Amazonas",
 			"location": "Parque Nacional Amacayacu",
-			"link":"http://www.colombia.travel/es/a-donde-ir/amazonia",
+			"link": "http://www.colombia.travel/es/a-donde-ir/amazonia",
 			"image": "url(../images/amazonia.jpg)",
 			"fact": "One of the unique animals that can be spotted in Colombia is the Amazon River dolphin, which is pink!"
 		}
@@ -86,7 +86,7 @@
 		bgImage.style.backgroundImage = locations[item].image;
 		let locationName = locations[item].place;
 		let location = locations[item].location;
-		let fact  = locations[item].fact;
+		let fact = locations[item].fact;
 		let link = locations[item].link;
 
 		document.getElementById('locationName').innerHTML = locationName;
@@ -153,6 +153,7 @@
 		// DOM Elements
 		const cityId = document.getElementById('city');
 		const tempId = document.getElementById('temp');
+		const iconId = document.getElementById('weatherIcon');
 
 		// Create a request variable and assign a new XMLHttpRequest object to it.
 		const request = new XMLHttpRequest();
@@ -166,8 +167,22 @@
 
 			if (request.status >= 200 && request.status < 400) {
 
-				const temperature = data.main.temp;
-				tempId.innerHTML = temperature.toFixed(1); //reduce to one decimal
+				// Get icon depending on time of day
+				const date = new Date();
+				const sunrise = new Date(data.sys.sunrise * 1000); //Convert a Unix timestamp to time
+				const sunset = new Date(data.sys.sunset * 1000);
+
+				/* Get suitable icon for weather */
+				if (date.getHours() >= sunrise.getHours() && date.getHours() < sunset.getHours()) {
+					var weatherIconID = `wi wi-owm-day-${data.weather[0].id}`;
+				}
+				else {
+					var weatherIconID = `wi wi-owm-night-${data.weather[0].id}`;
+				}
+
+				const temperature = (data.main.temp).toFixed(0);
+				tempId.innerHTML = `${temperature}&#x2103;`;
+				iconId.setAttribute('class', weatherIconID);
 				cityId.innerHTML = data.name;
 
 			} else {

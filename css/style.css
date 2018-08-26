@@ -25,10 +25,15 @@ body, html {
     background-size: cover;
 }
 /* weather icons*/
-i {
+i, #temp {
     font-size: 25px;
 }
-blockquote, span, p, a {
+
+#city {
+    font-size: 15px;
+}
+
+blockquote, span, p, a, i {
     font-family: -apple-system, 
     BlinkMacSystemFont, 
     "Segoe UI", 
