@@ -146,7 +146,7 @@
 
 	function checkWeather() {
 
-		const city = "san+francisco";
+		const city = "buenos+aires";
 		const apiKey = "&appid=cf6f3902316f9fa78adcc4f336e2728a";
 		const units = "&units=metric";
 		const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}${units}${apiKey}`;
