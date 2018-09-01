@@ -37,8 +37,8 @@
             "link": "http://www.colombia.travel/es/a-donde-ir/andina/armenia/actividades/conoce-el-valle-del-cocora",
             "image": "url(../images/cocora.jpg)",
             "fact": "Colombia is part of the Ring of Fire, a group of countries in the Pacific Ocean vulnerable to earthquakes and volcanic eruptions.",
-            "owner": "diego Lopez",
-            "url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
+            "owner": "María Fernanda Fierro",
+            "url": "https://unsplash.com/@0fernanda7"
         },
         {
             "id": 5,
@@ -89,6 +89,17 @@
             "fact": "With the second largest Spanish-speaking population, Colombia is also nicknamed “gateway to South America”.",
             "owner": "diego Lopez",
             "url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
+        },
+        {
+            "id": 10,
+            "place": "Colombian Coffee",
+            "location": "Triangulo del cafe",
+            "link": "http://www.colombia.travel/en/where-to-go/andean/ya-mei-ni-ya/activities/visit-national-coffee-park",
+            "image": "url(../images/coffee.jpg)",
+            "fact": "Colombia is the number three largest coffee producer in the world.",
+            "owner": "Milo Miloezger",
+            "url": "https://unsplash.com/@miloezger"
         }
+
     ]
 }
