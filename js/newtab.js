@@ -192,11 +192,11 @@
 		let greet;
 		//Display time of day
 		if (h >= 0 && h <= 12) {
-			greet = "Buenos dias";
+			greet = 'Buenos dias';
 		} else if (h > 12 && h < 19) {
-			greet = "Buenas tardes";
+			greet = 'Buenas tardes';
 		} else {
-			greet = "Buenas noches";
+			greet = 'Buenas noches';
 		}
 
 		return greet;
