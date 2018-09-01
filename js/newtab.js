@@ -1,95 +1,16 @@
 (function newTab() {
 	'use strict';
-	// Object with images and locations
-	const locations = [
-		{
-			"id": 1,
-			"place": "Torre del reloj",
-			"location": "Cartagena de Indias",
-			"link": "http://www.colombia.travel/es/a-donde-ir/caribe/cartagena-de-indias",
-			"image": "url(../images/cartagena.jpg)",
-			"fact": "The highest point in Colombia is the Pico Cristóbal Colón of the Andes, which stands at 18,700 feet tall.",
-			"owner": "diego Lopez",
-			"url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
-		},
-		{
-			"id": 2,
-			"place": "Caño Cristales",
-			"location": "Serrania de la Macarena",
-			"link": "http://www.colombia.travel/es/a-donde-ir/orinoquia/la-macarena/actividades/asombrate-con-cano-cristales",
-			"image": "url(../images/canoCristales.jpg)",
-			"fact": "Colombia is the second most biodiverse country in the world, after only Brazil which is 10 times its size. It is one of only 17 “megadiverse” countries in the world.",
-			"owner": "diego Lopez",
-			"url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
-		},
-		{
-			"id": 3,
-			"place": "Parque Tayrona",
-			"location": "Santa Marta",
-			"link": "http://www.colombia.travel/es/a-donde-ir/caribe/santa-marta",
-			"image": "url(../images/tayrona.jpg)",
-			"fact": "Colombia is the only country in South America that has coastlines on both the Pacific Ocean and the Caribbean Sea.",
-			"owner": "diego Lopez",
-			"url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
-		},
-		{
-			"id": 4,
-			"place": "Valle del Cocora",
-			"location": "Salento",
-			"link": "http://www.colombia.travel/es/a-donde-ir/andina/armenia/actividades/conoce-el-valle-del-cocora",
-			"image": "url(../images/cocora.jpg)",
-			"fact": "Colombia is part of the Ring of Fire, a group of countries in the Pacific Ocean vulnerable to earthquakes and volcanic eruptions.",
-			"owner": "diego Lopez",
-			"url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
-		},
-		{
-			"id": 5,
-			"place": "Cerro de Monserrate",
-			"location": "Bogotá",
-			"link": "http://www.colombia.travel/es/a-donde-ir/andina/bogota",
-			"image": "url(../images/monserrate.jpg)",
-			"fact": "Bogota has South America’s largest network of bicycle routes: over 300km stretching from slum areas and suburbs to the city centre.",
-			"owner": "diego Lopez",
-			"url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
-		},
-		{
-			"id": 6,
-			"place": "Cayo Acuario",
-			"location": "San Andres Islas",
-			"link": "http://www.colombia.travel/es/a-donde-ir/caribe/san-andres",
-			"image": "url(../images/sanandres.jpg)",
-			"fact": "There are over 300 beaches that locals and tourists can take advantage of to see all of the natural beauty this country has to offer.",
-			"owner": "diego Lopez",
-			"url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
-		},
-		{
-			"id": 7,
-			"place": "Santuario de las lajas",
-			"location": "Ipiales",
-			"link": "http://www.colombia.travel/es/que-hacer/pacifica/pasto/experiencias/el-santuario-de-las-lajas",
-			"image": "url(../images/santuariolaslajas.jpg)",
-			"fact": "Approximately 90% of the population of Colombia is Catholic.",
-			"owner": "diego Lopez",
-			"url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
-		},
-		{
-			"id": 8,
-			"place": "Amazonas",
-			"location": "Parque Nacional Amacayacu",
-			"link": "http://www.colombia.travel/es/a-donde-ir/amazonia",
-			"image": "url(../images/amazonia.jpg)",
-			"fact": "One of the unique animals that can be spotted in Colombia is the Amazon River dolphin, which is pink!",
-			"owner": "diego Lopez",
-			"url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
-		}
-	];
 
+	// Invoke initialization
+	init();
 
-	getImage();
-	startTime();
-	getIp(getWeather);
+	function init() {
 
-	//checkWeather();
+		// Execution Order.
+		getImage();
+		startTime();
+		getIp(getWeather);
+	};
 
 	function getIp(callback) {
 
@@ -106,9 +27,8 @@
 				//invoke checkWeather
 				callback(city);
 			}
-			
 		});
-	}
+	};
 
 	function getWeather(city) {
 
@@ -149,38 +69,50 @@
 			}
 
 		});
-	}
+	};
 
 	function getImage() {
 
 		//Background image
 		const bgImage = document.getElementById('bg');
+		let locations;
 
-		// Get a number between 0 and obj.Length
-		const objLength = locations.length;
-		const item = Math.floor((Math.random() * objLength));
-		const imageId = locations[item].id;
+		// Retrieve JSON file
+		$.getJSON('js/locations.json', function(data, status, xhr) {
 
-		// Set background image and place.
-		bgImage.style.backgroundImage = locations[item].image;
-		let locationName = locations[item].place;
-		let location = locations[item].location;
-		let fact = locations[item].fact;
-		let link = locations[item].link;
-		let owner = locations[item].owner;
-		let url = locations[item].url;
+			if (xhr.status >= 200 && xhr.status < 400) {
+				// Retreives city from response
+				locations = data.locations
 
-		document.getElementById('locationName').innerHTML = locationName;
-		document.getElementById('locationName').setAttribute('href', link);
-		document.getElementById('location').innerHTML = location;
-		document.getElementById('fact').innerHTML = fact;
-		document.getElementById('photographer').innerHTML = owner;
-		document.getElementById('photographer').setAttribute('href', url);
+				// Get a number between 0 and obj.Length
+				const objLength = locations.length;
+				const item = Math.floor((Math.random() * objLength));
+				const imageId = locations[item].id;
+			
+				//Set background image and place.
+				bgImage.style.backgroundImage = locations[item].image;
+				let locationName = locations[item].place;
+				let location = locations[item].location;
+				let fact = locations[item].fact;
+				let link = locations[item].link;
+				let owner = locations[item].owner;
+				let url = locations[item].url;
+
+				document.getElementById('locationName').innerHTML = locationName;
+				document.getElementById('locationName').setAttribute('href', link);
+				document.getElementById('location').innerHTML = location;
+				document.getElementById('fact').innerHTML = fact;
+				document.getElementById('photographer').innerHTML = owner;
+				document.getElementById('photographer').setAttribute('href', url);
 
 		// Change image at certain amount of time.
 		const reloadImage = setTimeout(getImage, 60000);
+			} else {
+				console.log(`error : status => ${status}`);
+			}
 
-	}
+		});
+	};
 
 	function startTime() {
 		// DOM elements
@@ -203,12 +135,12 @@
 
 		// Get time value every n secs
 		const reloadTime = setTimeout(startTime, 500);
-	}
+	};
 
 	// add zero in front of numbers < 10
 	function checkTime(i) {
 		if (i < 10) { i = `0${i}` };
 		return i;
-	}
+	};
 
 })();
