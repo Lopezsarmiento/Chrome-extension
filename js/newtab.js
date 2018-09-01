@@ -68,9 +68,72 @@
 		}
 	];
 
+
 	getImage();
 	startTime();
-	checkWeather();
+	getIp(getWeather);
+
+	//checkWeather();
+
+	function getIp(callback) {
+
+		// Request to API
+		$.getJSON('http://ipinfo.io', function(data, status, xhr) {
+
+			if (xhr.status >= 200 && xhr.status < 400) {
+				// Retreives city from response
+				let city = data.city;
+
+				// Replaces space for (+)
+				city = city.replace(' ', '+');
+
+				//invoke checkWeather
+				callback(city);
+			}
+			
+		});
+	}
+
+	function getWeather(city) {
+
+		const apiKey =  '&appid=cf6f3902316f9fa78adcc4f336e2728a';
+		const units = '&units=metric';
+		const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}${units}${apiKey}`;
+
+		// DOM Elements
+		const cityId = document.getElementById('city');
+		const tempId = document.getElementById('temp');
+		const iconId = document.getElementById('weatherIcon');
+
+
+		$.getJSON(url, function(data, status, xhr) {
+			
+			if (xhr.status >= 200 && xhr.status < 400) {
+
+				// Get icon depending on time of day
+				const date = new Date();
+				const sunrise = new Date(data.sys.sunrise * 1000); //Convert a Unix timestamp to time
+				const sunset = new Date(data.sys.sunset * 1000);
+
+				/* Get suitable icon for weather */
+				if (date.getHours() >= sunrise.getHours() && date.getHours() < sunset.getHours()) {
+					var weatherIconID = `wi wi-owm-day-${data.weather[0].id}`;
+				}
+				else {
+					var weatherIconID = `wi wi-owm-night-${data.weather[0].id}`;
+				}
+
+				const temperature = (data.main.temp).toFixed(0);
+				tempId.innerHTML = `${temperature}&#x2103;`;
+				iconId.setAttribute('class', weatherIconID);
+				cityId.innerHTML = (data.name).toUpperCase();
+
+			} else {
+				console.log(`error : status => ${status}`);
+			}
+
+		});
+	}
 
 	function getImage() {
 
@@ -144,54 +207,4 @@
 		return i;
 	}
 
-	function checkWeather() {
-
-		const city = "buenos+aires";
-		const apiKey = "&appid=cf6f3902316f9fa78adcc4f336e2728a";
-		const units = "&units=metric";
-		const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}${units}${apiKey}`;
-		// DOM Elements
-		const cityId = document.getElementById('city');
-		const tempId = document.getElementById('temp');
-		const iconId = document.getElementById('weatherIcon');
-
-		// Create a request variable and assign a new XMLHttpRequest object to it.
-		const request = new XMLHttpRequest();
-
-		// Open a new connection, using the GET request on the URL endpoint
-		request.open('GET', url, true);
-
-		request.onload = function () {
-			// Begin accessing JSON data here
-			const data = JSON.parse(this.response);
-
-			if (request.status >= 200 && request.status < 400) {
-
-				// Get icon depending on time of day
-				const date = new Date();
-				const sunrise = new Date(data.sys.sunrise * 1000); //Convert a Unix timestamp to time
-				const sunset = new Date(data.sys.sunset * 1000);
-
-				/* Get suitable icon for weather */
-				if (date.getHours() >= sunrise.getHours() && date.getHours() < sunset.getHours()) {
-					var weatherIconID = `wi wi-owm-day-${data.weather[0].id}`;
-				}
-				else {
-					var weatherIconID = `wi wi-owm-night-${data.weather[0].id}`;
-				}
-
-				const temperature = (data.main.temp).toFixed(0);
-				tempId.innerHTML = `${temperature}&#x2103;`;
-				iconId.setAttribute('class', weatherIconID);
-				cityId.innerHTML = (data.name).toUpperCase();
-
-			} else {
-				console.log('error :' + 'request.status : ' + request.status);
-			}
-
-		}
-
-		// Send request
-		request.send();
-	}
 })();
