@@ -5,6 +5,8 @@
 	init();
 
 	function init() {
+
+		// Execution Order.
 		getImage();
 		startTime();
 		getIp(getWeather);
@@ -25,7 +27,6 @@
 				//invoke checkWeather
 				callback(city);
 			}
-			
 		});
 	};
 
