@@ -86,7 +86,7 @@
 
 				// Get a number between 0 and obj.Length
 				const objLength = locations.length;
-				const item = 8; //Math.floor((Math.random() * objLength));
+				const item = Math.floor((Math.random() * objLength));
 				const imageId = locations[item].id;
 			
 				//Set background image and place.
