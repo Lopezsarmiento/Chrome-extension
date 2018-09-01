@@ -79,6 +79,16 @@
             "fact": "One of the unique animals that can be spotted in Colombia is the Amazon River dolphin, which is pink!",
             "owner": "diego Lopez",
             "url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
+        },
+        {
+            "id": 9,
+            "place": "Playa El Rodadero",
+            "location": "Santa Marta",
+            "link": "http://www.colombia.travel/es/a-donde-ir/caribe/santa-marta",
+            "image": "url(../images/elrodadero.jpg)",
+            "fact": "With the second largest Spanish-speaking population, Colombia is also nicknamed “gateway to South America”.",
+            "owner": "diego Lopez",
+            "url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
         }
     ]
 }
