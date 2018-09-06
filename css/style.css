@@ -87,12 +87,12 @@ body, html {
 
 /* bottom row*/
 .bottom-row {
-    position: relative;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
-.bottom-row div {
-    padding-top: 50px;
-}
 /* bottom-left - location info*/
 .text-left a {
     background-color: transparent;
