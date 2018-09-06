@@ -12,20 +12,58 @@ body, html {
 }
 
 #bg {
-    /* The image use as bground
-    is being retrieved dinamically
-    inside newtab.js*/
-
-    /* Full height */
-    height: 100%;
-
+    /* The image use as bground is being retrieved dinamically inside newtab.js*/
+    height: 100%; /* Full height */
     /* center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* weather icons*/
-i, #temp {
+
+/* upper-left - Photograph info */
+.top-row {
+    padding-top: 10px;
+}
+
+#taker {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    padding:4px 6px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size:15px;
+    line-height:1.2;
+    display:inline-block;
+    border-radius:3px;
+    text-shadow: 1px 1px 2px #292929;
+}
+
+#taker span{
+    display:inline-block;
+    padding:2px 3px
+}
+
+#svg {
+    height:12px;
+    width:auto;
+    position:relative;
+    vertical-align:middle;
+    top:-1px;
+    fill: white;
+}
+
+/* upper-right - Weather info */
+.text-right {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px #292929;
+}
+
+#weatherIcon{
+    font-size: 25px;
+}
+
+#temp {
     font-size: 25px;
 }
 
@@ -33,48 +71,61 @@ i, #temp {
     font-size: 15px;
 }
 
-blockquote, span, p, a, i {
-    font-family: -apple-system, 
-    BlinkMacSystemFont, 
-    "Segoe UI", 
-    Roboto, 
-    Oxygen-Sans, 
-    Ubuntu, 
-    Cantarell, 
-    "Helvetica Neue",
-    sans-serif;
-
-    color: #FFF;
-    text-shadow: 1px 1px 2px #292929;
-}
-.text-left, .text-center {
-    color: #FFF;
-    font-size: 15px;
-}
-
-.text-left a {
-    text-decoration: none;
-}
-.top-row {
-    padding-top: 2%;
-    height: 10%;
-}
-
+/* Center - Time info*/
 .middle-row {
-    height: 80%;
+    padding-top: 50px;
+    text-align: center;
     display: block;
 }
 
-.bottom-row {
-    height: 10%;
-}
-
-.middle {
-    height: 100%;
-    text-align: center;
-    padding-top: 10%; 
-}
-
 #clock {
-    font-size: 180px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: white;
+    font-size: 200px;
+    text-shadow: 1px 1px 2px #292929;
+}
+
+/* bottom row*/
+.bottom-row {
+    position: relative;
+}
+
+.bottom-row div {
+    padding-top: 50px;
+}
+/* bottom-left - location info*/
+.text-left a {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    padding:4px 6px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size:15px;
+    line-height:1.2;
+    display:inline-block;
+    border-radius:3px;
+    text-shadow: 1px 1px 2px #292929;
+}
+
+/* bottom-Center - fact info*/
+
+#fact {
+    color: white;
+    font-size: 15px;
+    text-shadow: 1px 1px 2px #292929;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* bottom-right - fact info*/
+.text-right a {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    padding:4px 6px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size:15px;
+    line-height:1.2;
+    display:inline-block;
+    border-radius:3px;
+    text-shadow: 1px 1px 2px #292929;
 }
