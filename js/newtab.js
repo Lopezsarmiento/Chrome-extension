@@ -60,9 +60,9 @@
 				}
 
 				const temperature = (data.main.temp).toFixed(0);
-				tempId.innerHTML = `${temperature}&#x2103;`;
+				tempId.innerHTML = `| ${temperature}&#x2103;`;
 				iconId.setAttribute('class', weatherIconID);
-				cityId.innerHTML = (data.name).toUpperCase();
+				cityId.innerHTML = data.name;
 
 			} else {
 				console.log(`error : status => ${status}`);
@@ -98,12 +98,12 @@
 				let owner = locations[item].owner;
 				let url = locations[item].url;
 
-				document.getElementById('locationName').innerHTML = locationName;
-				document.getElementById('locationName').setAttribute('href', link);
-				document.getElementById('location').innerHTML = location;
+				document.getElementById('locationName').innerHTML = `${locationName}`;
+				document.getElementById('locationUrl').setAttribute('href', link);
+				document.getElementById('location').innerHTML = `| ${location}`;
 				document.getElementById('fact').innerHTML = fact;
-				document.getElementById('photographer').innerHTML = owner;
-				document.getElementById('photographer').setAttribute('href', url);
+				document.getElementById('owner').innerHTML = owner;
+				document.getElementById('taker').setAttribute('href', url);
 
 		// Change image at certain amount of time.
 		const reloadImage = setTimeout(getImage, 60000);
