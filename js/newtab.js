@@ -7,34 +7,34 @@
 	function init() {
 
 		// Execution Order.
+		getLocation();
 		getImage();
 		startTime();
-		getIp(getWeather);
 	};
 
-	function getIp(callback) {
+	function getLocation() {
+		if(navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			console.log('location is not supported');
+		}
+	}
 
-		// Request to API
-		$.getJSON('http://ipinfo.io', function(data, status, xhr) {
+	function showPosition(position) {
+		let lat = position.coords.latitude;
+		let long = position.coords.longitude;
 
-			if (xhr.status >= 200 && xhr.status < 400) {
-				// Retreives city from response
-				let city = data.city;
+		getWeather(lat, long);
 
-				// Replaces space for (+)
-				city = city.replace(' ', '+');
+	}
 
-				//invoke checkWeather
-				callback(city);
-			}
-		});
-	};
-
-	function getWeather(city) {
+	function getWeather(latitude, longitude) {
 
 		const apiKey =  '&appid=cf6f3902316f9fa78adcc4f336e2728a';
+		const latlong = `lat=${latitude}&lon=${longitude}`;
 		const units = '&units=metric';
-		const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}${units}${apiKey}`;
+		//const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}${units}${apiKey}`;
+		const url = `http://api.openweathermap.org/data/2.5/weather?${latlong}${units}${apiKey}`;
 
 		// DOM Elements
 		const cityId = document.getElementById('city');
