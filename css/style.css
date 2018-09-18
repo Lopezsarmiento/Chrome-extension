@@ -35,7 +35,7 @@ body, html {
     line-height:1.2;
     display:inline-block;
     border-radius:3px;
-    text-shadow: 1px 1px 2px #292929;
+    text-shadow: 2px 2px 4px #292929;
 }
 
 #taker span{
@@ -56,7 +56,7 @@ body, html {
 .text-right {
     font-family: 'Roboto', Arial, sans-serif;
     color: white;
-    text-shadow: 1px 1px 2px #292929;
+    text-shadow: 2px 2px 4px #292929;
 }
 
 #weatherIcon{
@@ -82,7 +82,7 @@ body, html {
     font-family: 'Roboto', Arial, sans-serif;
     color: white;
     font-size: 200px;
-    text-shadow: 1px 1px 2px #292929;
+    text-shadow: 2px 2px 4px #292929;
 }
 
 /* bottom row*/
@@ -104,15 +104,15 @@ body, html {
     line-height:1.2;
     display:inline-block;
     border-radius:3px;
-    text-shadow: 1px 1px 2px #292929;
+    text-shadow: 2px 2px 4px #292929;
 }
 
 /* bottom-Center - fact info*/
 
 #fact {
     color: white;
-    font-size: 15px;
-    text-shadow: 1px 1px 2px #292929;
+    font-size: 17px;
+    text-shadow: 2px 2px 4px #292929;
     font-family: 'Open Sans', sans-serif;
 }
 
