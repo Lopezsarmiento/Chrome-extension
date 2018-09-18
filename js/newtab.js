@@ -104,7 +104,7 @@
 
 				document.getElementById('locationName').innerHTML = `${locationName}`;
 				document.getElementById('locationUrl').setAttribute('href', link);
-				document.getElementById('location').innerHTML = `| ${location}`;
+				document.getElementById('location').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${location}`;
 				document.getElementById('fact').innerHTML = fact;
 				document.getElementById('owner').innerHTML = owner;
 				document.getElementById('taker').setAttribute('href', url);
