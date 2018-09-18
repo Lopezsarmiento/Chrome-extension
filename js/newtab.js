@@ -42,7 +42,7 @@
 
 		fetch(url)
 			.then(function (response) {
-				if (!response.ok) {
+				if(!response.ok) {
 					throw Error(response.statusText);
 				}
 				// Read the response as json.
