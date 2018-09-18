@@ -13,7 +13,7 @@
 	};
 
 	function getLocation() {
-		if(navigator.geolocation) {
+		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(showPosition);
 		} else {
 			console.log('location is not supported');
@@ -28,10 +28,9 @@
 
 	}
 
-	function getWeather(latitude, longitude) {
-
-		const apiKey =  '&appid=cf6f3902316f9fa78adcc4f336e2728a';
-		const latlong = `lat=${latitude}&lon=${longitude}`;
+	function getWeather(lat, long) {
+		const apiKey = '&appid=cf6f3902316f9fa78adcc4f336e2728a';
+		const latlong = `lat=${lat}&lon=${long}`;
 		const units = '&units=metric';
 		//const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}${units}${apiKey}`;
 		const url = `http://api.openweathermap.org/data/2.5/weather?${latlong}${units}${apiKey}`;
@@ -41,10 +40,17 @@
 		const tempId = document.getElementById('temp');
 		const iconId = document.getElementById('weatherIcon');
 
-
-		$.getJSON(url, function(data, status, xhr) {
-			
-			if (xhr.status >= 200 && xhr.status < 400) {
+		fetch(url)
+			.then(function (response) {
+				if (!response.ok) {
+					throw Error(response.statusText);
+				}
+				// Read the response as json.
+				return response.json();
+			})
+			.then(function (responseAsJson) {
+				// Do stuff with the JSON
+				let data = responseAsJson;
 
 				// Get icon depending on time of day
 				const date = new Date();
@@ -60,16 +66,14 @@
 				}
 
 				const temperature = (data.main.temp).toFixed(0);
-				tempId.innerHTML = `| ${temperature}&#x2103;`;
+				tempId.innerHTML = ` | ${temperature}&#x2103;`;
 				iconId.setAttribute('class', weatherIconID);
 				cityId.innerHTML = data.name;
-
-			} else {
-				console.log(`error : status => ${status}`);
-			}
-
-		});
-	};
+			})
+			.catch(function (error) {
+				console.log('Looks like there was a problem: \n', error);
+			});
+	}
 
 	function getImage() {
 
@@ -78,7 +82,7 @@
 		let locations;
 
 		// Retrieve JSON file
-		$.getJSON('js/locations.json', function(data, status, xhr) {
+		$.getJSON('js/locations.json', function (data, status, xhr) {
 
 			if (xhr.status >= 200 && xhr.status < 400) {
 				// Retreives city from response
@@ -88,7 +92,7 @@
 				const objLength = locations.length;
 				const item = Math.floor((Math.random() * objLength));
 				const imageId = locations[item].id;
-			
+
 				//Set background image and place.
 				bgImage.style.backgroundImage = locations[item].image;
 				let locationName = locations[item].place;
@@ -105,8 +109,8 @@
 				document.getElementById('owner').innerHTML = owner;
 				document.getElementById('taker').setAttribute('href', url);
 
-		// Change image at certain amount of time.
-		const reloadImage = setTimeout(getImage, 60000);
+				// Change image at certain amount of time.
+				const reloadImage = setTimeout(getImage, 60000);
 			} else {
 				console.log(`error : status => ${status}`);
 			}

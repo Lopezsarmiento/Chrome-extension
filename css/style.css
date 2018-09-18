@@ -88,9 +88,9 @@ body, html {
 /* bottom row*/
 .bottom-row {
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
+    padding-bottom: 1%;
 }
 
 /* bottom-left - location info*/
@@ -116,7 +116,7 @@ body, html {
     font-family: 'Open Sans', sans-serif;
 }
 
-/* bottom-right - fact info*/
+/* bottom-right - google*/
 .text-right a {
     background-color: transparent;
     color: white;
