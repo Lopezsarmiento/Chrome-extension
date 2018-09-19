@@ -2,13 +2,13 @@
     "locations": [
         {
             "id": 1,
-            "place": "Torre del reloj",
-            "location": "Cartagena de Indias",
+            "place": "Ciudad amurallada",
+            "location": "Cartagena de Indias - bolivar",
             "link": "http://www.colombia.travel/es/a-donde-ir/caribe/cartagena-de-indias",
             "image": "url(../images/cartagena.jpg)",
             "fact": "El punto mas alto en Colombia es el Pico Cristobal Colon, que se eleva 5775 msnm y es una de las montaña costeras más altas del mundo",
-            "owner": "Diego Lopez",
-            "url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
+            "owner": "Gus LDN",
+            "url": "https://unsplash.com/@gus_ldn"
         },
         {
             "id": 2,
@@ -18,7 +18,7 @@
             "image": "url(../images/canoCristales.jpg)",
             "fact": "Colombia es el segundo pais mas biodiverso del mundo, perteneciendo al grupo de los 17 paises megadiversos en el mundo.",
             "owner": "Diego Lopez",
-            "url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
+            "url": "https://unsplash.com"
         },
         {
             "id": 3,
@@ -26,9 +26,9 @@
             "location": "Santa Marta",
             "link": "http://www.colombia.travel/es/a-donde-ir/caribe/santa-marta",
             "image": "url(../images/tayrona.jpg)",
-            "fact": "Colombia es el unico pais en suramerica que tiene costas en ambos oceanos, pacifico y caribe.",
+            "fact": "Colombia es el unico pais en suramerica que tiene costas en el oceano pacifico y caribe.",
             "owner": "Diego Lopez",
-            "url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
+            "url": "https://unsplash.com"
         },
         {
             "id": 4,
@@ -48,7 +48,7 @@
             "image": "url(../images/monserrate.jpg)",
             "fact": "Bogota tiene la red de ciclorutas mas larga de suramerica. Alrededor de 300km que se extienden por zonas urbanas.",
             "owner": "Diego Lopez",
-            "url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
+            "url": "https://unsplash.com"
         },
         {
             "id": 6,
@@ -58,7 +58,7 @@
             "image": "url(../images/sanandres.jpg)",
             "fact": "Hay mas de 300 playas que turistas y locales pueden disfrutar para ver toda la belleza que Colombia ofrece.",
             "owner": "Diego Lopez",
-            "url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
+            "url": "https://unsplash.com"
         },
         {
             "id": 7,
@@ -68,7 +68,7 @@
             "image": "url(../images/santuariolaslajas.jpg)",
             "fact": "Approximadamente 90% de la población en Colombia es Catolica.",
             "owner": "Diego Lopez",
-            "url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
+            "url": "https://unsplash.com"
         },
         {
             "id": 8,
@@ -78,7 +78,7 @@
             "image": "url(../images/amazonia.jpg)",
             "fact": "Uno de los animales unicos que puedes ver en Colombia es el Delfin Rosado del amazonas.",
             "owner": "Diego Lopez",
-            "url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
+            "url": "https://unsplash.com"
         },
         {
             "id": 9,
@@ -86,9 +86,9 @@
             "location": "Santa Marta",
             "link": "http://www.colombia.travel/es/a-donde-ir/caribe/santa-marta",
             "image": "url(../images/elrodadero.jpg)",
-            "fact": "Colombia es también conocida como 'la Puerta' de Sur America.",
+            "fact": "Colombia es también conocida como 'la Puerta' de Suramerica.",
             "owner": "Diego Lopez",
-            "url": "https://www.boredpanda.com/top-10-photographers-for-travel-portraits/?utm_source=google&utm_medium=organic&utm_campaign=organic"
+            "url": "https://unsplash.com"
         },
         {
             "id": 10,
@@ -106,7 +106,7 @@
             "location": "Parque Nacional Tayrona",
             "link": "http://www.colombia.travel/en/where-to-go/andean/ya-mei-ni-ya/activities/visit-national-coffee-park",
             "image": "url(../images/caboSanJuan.jpg)",
-            "fact": "Colombia es lider mundial en producción de Esmeraldas. La mejor calidad de gemas verders solo se encuentran en Colombia.",
+            "fact": "Colombia es lider mundial en producción de Esmeraldas. La mejor calidad de gemas verdes solo se encuentran en Colombia.",
             "owner": "Christian Holzinger",
             "url": "https://unsplash.com/@pixelatelier"
         },
@@ -116,9 +116,19 @@
             "location": "Medellin - Antioquia",
             "link": "http://www.colombia.travel/en/where-to-go/andean/ya-mei-ni-ya/activities/visit-national-coffee-park",
             "image": "url(../images/medellin.jpg)",
-            "fact": "Los detalles en muchas iglesias en Colombia reflejan las eras medievales y renacentistas españolas.",
+            "fact": "Los detalles en muchas iglesias en Colombia reflejan la era medieval y renacentista española.",
             "owner": "Juan Saravia",
             "url": "https://unsplash.com/@juansaravia"
+        },
+        {
+            "id": 13,
+            "place": "Avistamiento de Ballenas",
+            "location": "Nuquí - Chocó",
+            "link": "http://www.colombia.travel/es/que-hacer/pacifica/guapi/experiencias/avistamiento-de-ballenas-en-el-pacifico",
+            "image": "url(../images/nuqui.jpg)",
+            "fact": "Son 8.500 los kilómetros que las ballenas jorobadas recorren desde la Antártida para llegar entre julio y noviembre a las costas del Pacífico colombiano.",
+            "owner": "Emilio",
+            "url": "https://www.twenty20.com/vipiripi/photos"
         }
 
     ]

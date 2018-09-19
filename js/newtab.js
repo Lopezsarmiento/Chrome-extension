@@ -101,10 +101,10 @@
 				let link = locations[item].link;
 				let owner = locations[item].owner;
 				let url = locations[item].url;
-
+				let locationIcon = '<i class="fas fa-map-marker-alt"></i>';
 				document.getElementById('locationName').innerHTML = `${locationName}`;
 				document.getElementById('locationUrl').setAttribute('href', link);
-				document.getElementById('location').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${location}`;
+				document.getElementById('location').innerHTML = `${locationIcon} ${location}`;
 				document.getElementById('fact').innerHTML = fact;
 				document.getElementById('owner').innerHTML = owner;
 				document.getElementById('taker').setAttribute('href', url);
