@@ -31,7 +31,7 @@ body, html {
     text-decoration: none;
     padding:4px 6px;
     font-family: 'Roboto', Arial, sans-serif;
-    font-size:15px;
+    font-size:1.3vw;
     line-height:1.2;
     display:inline-block;
     border-radius:3px;
@@ -59,21 +59,16 @@ body, html {
     text-shadow: 2px 2px 4px #292929;
 }
 
-#weatherIcon{
-    font-size: 25px;
-}
-
-#temp {
-    font-size: 25px;
+#weatherIcon, #temp{
+    font-size: 2vw;
 }
 
 #city {
-    font-size: 15px;
+    font-size: 1.5vw;
 }
 
 /* Center - Time info*/
 .middle-row {
-    padding-top: 50px;
     text-align: center;
     display: block;
 }
@@ -81,7 +76,7 @@ body, html {
 #clock {
     font-family: 'Roboto', Arial, sans-serif;
     color: white;
-    font-size: 200px;
+    font-size: 20vw;
     text-shadow: 2px 2px 4px #292929;
 }
 
@@ -100,7 +95,7 @@ body, html {
     text-decoration: none;
     padding:4px 6px;
     font-family: 'Roboto', Arial, sans-serif;
-    font-size:15px;
+    font-size:1.3vw;
     line-height:1.2;
     display:inline-block;
     border-radius:3px;
@@ -111,7 +106,7 @@ body, html {
 
 #fact {
     color: white;
-    font-size: 17px;
+    font-size: 1.2vw;
     text-shadow: 2px 2px 4px #292929;
     font-family: 'Open Sans', sans-serif;
 }
@@ -123,7 +118,7 @@ body, html {
     text-decoration: none;
     padding:4px 6px;
     font-family: 'Roboto', Arial, sans-serif;
-    font-size:15px;
+    font-size:1.5vw;
     line-height:1.2;
     display:inline-block;
     border-radius:3px;
