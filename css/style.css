@@ -53,7 +53,7 @@ body, html {
 }
 
 /* upper-right - Weather info */
-.top-right {
+.text-right {
     font-family: 'Roboto', Arial, sans-serif;
     color: white;
     text-shadow: 2px 2px 4px #292929;
