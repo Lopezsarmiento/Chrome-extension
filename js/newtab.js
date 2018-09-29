@@ -65,10 +65,11 @@
 					var weatherIconID = `wi wi-owm-night-${data.weather[0].id}`;
 				}
 
+				const locationIcon = '<i class="fas fa-map-marker-alt"></i>';
 				const temperature = (data.main.temp).toFixed(0);
 				tempId.innerHTML = ` | ${temperature}&#x2103;`;
 				iconId.setAttribute('class', weatherIconID);
-				cityId.innerHTML = data.name;
+				cityId.innerHTML = `${data.name}`;
 			})
 			.catch(function (error) {
 				console.log('Looks like there was a problem: \n', error);

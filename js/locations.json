@@ -6,7 +6,7 @@
             "location": "Cartagena de Indias - bolivar",
             "link": "http://www.colombia.travel/es/a-donde-ir/caribe/cartagena-de-indias",
             "image": "url(../images/cartagena.jpg)",
-            "fact": "El punto mas alto en Colombia es el Pico Cristobal Colon, que se eleva 5775 msnm y es una de las montaña costeras más altas del mundo",
+            "fact": "El punto mas alto en Colombia es el Pico Cristobal Colon, que se eleva 5775 msnm y es una de las montañas costeras más altas del mundo",
             "owner": "Gus LDN",
             "url": "https://unsplash.com/@gus_ldn"
         },
@@ -16,7 +16,7 @@
             "location": "Serrania de la Macarena",
             "link": "http://www.colombia.travel/es/a-donde-ir/orinoquia/la-macarena/actividades/asombrate-con-cano-cristales",
             "image": "url(../images/canoCristales.jpg)",
-            "fact": "Colombia es el segundo pais mas biodiverso del mundo, perteneciendo al grupo de los 17 paises megadiversos en el mundo.",
+            "fact": "Colombia es el segundo pais mas biodiverso del planeta, perteneciendo al grupo de los 17 paises megadiversos en el mundo.",
             "owner": "Wikimedia Commons",
             "url": "https://en.m.wikipedia.org/wiki/File:CA%C3%91O_CRISTALES_%E2%80%93_LOS_OCHOS_01.jpg"
         },
@@ -46,7 +46,7 @@
             "location": "Bogotá - Colombia",
             "link": "http://www.colombia.travel/es/a-donde-ir/andina/bogota",
             "image": "url(../images/bogota.jpg)",
-            "fact": "Bogota tiene la red de ciclorutas mas larga de suramerica. Alrededor de 300km que se extienden por zonas urbanas.",
+            "fact": "Bogotá tiene la red de ciclorutas mas larga de suramerica. Alrededor de 300km que se extienden por zonas urbanas.",
             "owner": "Michael Lechner",
             "url": "https://unsplash.com/@mlechner"
         },
@@ -61,7 +61,7 @@
             "url": "https://unsplash.com/@sergiojara"
         },
         {
-            "id": 9,
+            "id": 7,
             "place": "Playa El Rodadero",
             "location": "Santa Marta",
             "link": "http://www.colombia.travel/es/a-donde-ir/caribe/santa-marta",
@@ -71,7 +71,7 @@
             "url": "https://unsplash.com"
         },
         {
-            "id": 10,
+            "id": 8,
             "place": "Colombian Coffee",
             "location": "Triangulo del cafe",
             "link": "http://www.colombia.travel/en/where-to-go/andean/ya-mei-ni-ya/activities/visit-national-coffee-park",
@@ -81,7 +81,7 @@
             "url": "https://unsplash.com/@miloezger"
         },
         {
-            "id": 11,
+            "id": 9,
             "place": "Cabo San Juan del Guia",
             "location": "Parque Nacional Tayrona",
             "link": "http://www.colombia.travel/en/where-to-go/andean/ya-mei-ni-ya/activities/visit-national-coffee-park",
@@ -91,22 +91,22 @@
             "url": "https://unsplash.com/@pixelatelier"
         },
         {
-            "id": 12,
+            "id": 10,
             "place": "Panoramica de Medellin",
             "location": "Medellin - Antioquia",
             "link": "http://www.colombia.travel/en/where-to-go/andean/ya-mei-ni-ya/activities/visit-national-coffee-park",
             "image": "url(../images/medellin.jpg)",
-            "fact": "Los detalles en muchas iglesias en Colombia reflejan la era medieval y renacentista española.",
+            "fact": "Los detalles de muchas iglesias en Colombia reflejan la era medieval y renacentista española.",
             "owner": "Juan Saravia",
             "url": "https://unsplash.com/@juansaravia"
         },
         {
-            "id": 13,
+            "id": 11,
             "place": "Avistamiento de Ballenas",
             "location": "Nuquí - Chocó",
             "link": "http://www.colombia.travel/es/que-hacer/pacifica/guapi/experiencias/avistamiento-de-ballenas-en-el-pacifico",
             "image": "url(../images/nuqui.jpg)",
-            "fact": "Son 8.500 los kilómetros que las ballenas jorobadas recorren desde la Antártida para llegar entre julio y noviembre a las costas del Pacífico colombiano.",
+            "fact": "Son 8.500 los kilómetros que las ballenas jorobadas recorren desde la Antártida para llegar a las costas del Pacífico colombiano entre julio y noviembre.",
             "owner": "Emilio",
             "url": "https://www.twenty20.com/vipiripi/photos"
         }
