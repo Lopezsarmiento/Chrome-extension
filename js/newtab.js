@@ -29,11 +29,10 @@
 	}
 
 	function getWeather(lat, long) {
-		const apiKey = '&appid=cf6f3902316f9fa78adcc4f336e2728a';
+		const pepper = '&appid=cf6f3902316f9fa78adcc4f336e2728a';
 		const latlong = `lat=${lat}&lon=${long}`;
 		const units = '&units=metric';
-		//const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}${units}${apiKey}`;
-		const url = `http://api.openweathermap.org/data/2.5/weather?${latlong}${units}${apiKey}`;
+		const url = `http://api.openweathermap.org/data/2.5/weather?${latlong}${units}${pepper}`;
 
 		// DOM Elements
 		const cityId = document.getElementById('city');
