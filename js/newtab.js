@@ -80,6 +80,7 @@
 		//Background image
 		const bgImage = document.getElementById('bg');
 		let locations;
+		const lang = getLang();
 
 		// Retrieve JSON file
 		$.getJSON('js/locations.json', function (data, status, xhr) {
@@ -95,12 +96,13 @@
 
 				//Set background image and place.
 				bgImage.style.backgroundImage = locations[item].image;
-				let locationName = locations[item].place;
+				let locationName = (lang === 'en') ? locations[item].place.en : locations[item].place.es;
 				let location = locations[item].location;
-				let fact = locations[item].fact;
-				let link = locations[item].link;
+				let fact =  (lang === 'en') ? locations[item].fact.en : locations[item].fact.es;
+				let link = (lang === 'en') ? locations[item].link.en: locations[item].link.es;
 				let owner = locations[item].owner;
 				let url = locations[item].url;
+				let photo = (lang === 'en') ? 'Photograph' : 'Fotografia';
 				let locationIcon = '<i class="fas fa-map-marker-alt"></i>';
 				document.getElementById('locationName').innerHTML = `${locationName}`;
 				document.getElementById('locationUrl').setAttribute('href', link);
@@ -108,6 +110,7 @@
 				document.getElementById('fact').innerHTML = fact;
 				document.getElementById('owner').innerHTML = owner;
 				document.getElementById('taker').setAttribute('href', url);
+				document.getElementById('photo').innerHTML = photo;
 
 				// Change image at certain amount of time.
 				const reloadImage = setTimeout(getImage, 60000);
@@ -146,5 +149,16 @@
 		if (i < 10) { i = `0${i}` };
 		return i;
 	};
+
+	function getLang() {
+
+		let lang = 'en';
+
+		if (navigator.language === 'es') {
+			return lang = 'es';
+		}
+
+		return lang;
+	}
 
 })();
