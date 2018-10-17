@@ -153,11 +153,11 @@
 	function getLang() {
 
 		let lang = 'en';
+		let browserLang = navigator.language;
 
-		if (navigator.language === 'es') {
+		if (browserLang.includes('es')) {
 			return lang = 'es';
 		}
-
 		return lang;
 	}
 
