@@ -14,7 +14,7 @@
             "image": "url(../images/cartagena.jpg)",
             "fact": {
                 "en": "Over 4,000 species of orchids can be found in Colombia.",
-                "es": "Mas de 4000 especies de orquideas se encuentran en Colombia." 
+                "es": "Mas de 4000 especies de orquideas se encuentran en Colombia."
             },
             "owner": "Gus LDN",
             "url": "https://unsplash.com/@gus_ldn"
@@ -47,7 +47,7 @@
             "location": "Parque Tayrona - Magadalena",
             "link": {
                 "en": "http://www.colombia.travel/en/where-to-go/caribbean/santa-marta",
-                "es": "http://www.colombia.travel/es/a-donde-ir/caribe/santa-marta" 
+                "es": "http://www.colombia.travel/es/a-donde-ir/caribe/santa-marta"
             },
             "image": "url(../images/tayrona.jpg)",
             "fact": {
@@ -66,7 +66,7 @@
             "location": "Salento - Quindio",
             "link": {
                 "en": "http://www.colombia.travel/en/where-to-go/andean/armenia/activities/visit-cocora-valley",
-                "es": "http://www.colombia.travel/es/a-donde-ir/andina/armenia/actividades/conoce-el-valle-del-cocora" 
+                "es": "http://www.colombia.travel/es/a-donde-ir/andina/armenia/actividades/conoce-el-valle-del-cocora"
             },
             "image": "url(../images/cocora.jpg)",
             "fact": {
@@ -80,12 +80,12 @@
             "id": 5,
             "place": {
                 "en": "Bogotá's Downtown",
-                "es": "centro de Bogotá" 
+                "es": "centro de Bogotá"
             },
             "location": "Bogotá - Cundinamarca",
             "link": {
                 "en": "http://www.colombia.travel/en/where-to-go/andean/bogota",
-                "es": "http://www.colombia.travel/es/a-donde-ir/andina/bogota" 
+                "es": "http://www.colombia.travel/es/a-donde-ir/andina/bogota"
             },
             "image": "url(../images/bogota.jpg)",
             "fact": {
@@ -104,7 +104,7 @@
             "location": "San Andres Islas",
             "link": {
                 "en": "http://www.colombia.travel/en/where-to-go/caribbean/san-andres",
-                "es": "http://www.colombia.travel/es/a-donde-ir/caribe/san-andres" 
+                "es": "http://www.colombia.travel/es/a-donde-ir/caribe/san-andres"
             },
             "image": "url(../images/cayoCangrejo.jpg)",
             "fact": {
@@ -144,7 +144,7 @@
             "image": "url(../images/coffee.jpg)",
             "fact": {
                 "en": "Colombia is the third largest exporter of coffee in the world after Brazil and Vietnam.",
-                "es": "Colombia es el tercer mas grande productor de cafe en el mundo despues de Brasil y Vietnam." 
+                "es": "Colombia es el tercer mas grande productor de cafe en el mundo despues de Brasil y Vietnam."
             },
             "owner": "Milo Miloezger",
             "url": "https://unsplash.com/@miloezger"
@@ -191,7 +191,7 @@
             "id": 11,
             "place": {
                 "en": "Whales-watching",
-                "es": "Avistamiento de Ballenas" 
+                "es": "Avistamiento de Ballenas"
             },
             "location": "Nuquí - Chocó",
             "link": {
@@ -201,11 +201,13 @@
             "image": "url(../images/nuqui.jpg)",
             "fact": {
                 "en": "Humpback whales (also known as Yubarta whales) travel over 5500 miles from the Antarctic each year, arriving to the Colombian Pacific coast between July and November.",
-                "es": "Son 8.500 los kilómetros que las ballenas jorobadas recorren desde la Antártida para llegar a las costas del Pacífico colombiano entre julio y noviembre." 
+                "es": "Son 8.500 los kilómetros que las ballenas jorobadas recorren desde la Antártida para llegar a las costas del Pacífico colombiano entre julio y noviembre."
             },
             "owner": "Emilio",
             "url": "https://www.twenty20.com/vipiripi/photos"
         }
-
-    ]
+    ],
+    "Config": {
+        "api": "&appid=cf6f3902316f9fa78adcc4f336e2728a"
+    }
 }
