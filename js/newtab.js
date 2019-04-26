@@ -41,7 +41,7 @@
 
 		fetch(url)
 			.then(function (response) {
-				if(!response.ok) {
+				if (!response.ok) {
 					throw Error(response.statusText);
 				}
 				// Read the response as json.
@@ -98,8 +98,8 @@
 				bgImage.style.backgroundImage = locations[item].image;
 				let locationName = (lang === 'en') ? locations[item].place.en : locations[item].place.es;
 				let location = locations[item].location;
-				let fact =  (lang === 'en') ? locations[item].fact.en : locations[item].fact.es;
-				let link = (lang === 'en') ? locations[item].link.en: locations[item].link.es;
+				let fact = (lang === 'en') ? locations[item].fact.en : locations[item].fact.es;
+				let link = (lang === 'en') ? locations[item].link.en : locations[item].link.es;
 				let owner = locations[item].owner;
 				let url = locations[item].url;
 				let photo = (lang === 'en') ? 'Photograph' : 'Fotografia';
