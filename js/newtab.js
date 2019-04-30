@@ -1,3 +1,4 @@
+//1.1-ch-AddLang
 (function newTab() {
 	'use strict';
 
